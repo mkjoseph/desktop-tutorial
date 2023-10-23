@@ -18,3 +18,25 @@ function swapPairs(head) {
     
     return dummy.next;
 }
+
+// Load Stripe.js asynchronously
+var stripe = Stripe('YOUR_PUBLISHABLE_KEY');
+
+// Create a checkout session
+fetch('/create-checkout-session', {
+    method: 'POST',
+})
+.then(function(response) {
+    return response.json();
+})
+.then(function(session) {
+    return stripe.redirectToCheckout({ sessionId: session.id });
+})
+.then(function(result) {
+    // If `redirectToCheckout` fails due to a browser or network
+    // error, you should display the localized error message to your
+    // customer using `result.error.message`.
+})
+.catch(function(error) {
+    console.error('Error:', error);
+});
