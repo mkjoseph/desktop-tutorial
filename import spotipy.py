@@ -10,8 +10,6 @@ client_secret = 'your_client_secret'
 redirect_uri = 'http://localhost:8888/callback'
 token = util.prompt_for_user_token(username, scope, client_id, client_secret, redirect_uri)
 
-# Get the playlist ID of the playlist to be shuffled
-playlist_id = 'your_playlist_id'
 
 # Get the track IDs of all the tracks in the playlist
 sp = spotipy.Spotify(auth=token)
