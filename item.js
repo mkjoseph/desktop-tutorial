@@ -70,3 +70,11 @@ fetch('https://api.spotify.com/v1/users/{user_id}/playlists', {
         });
     });
 });
+
+const myArray = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+];
+
+const myData = myArray[2][1];
