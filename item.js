@@ -78,3 +78,11 @@ const myArray = [
 ];
 
 const myData = myArray[2][1];
+
+const myList = [
+    ["Chocolate Bar", 15],
+    ["Milk", 2],
+    ["Bread", 1],
+    ["Eggs", 12],
+    ["Bananas", 6]
+];
