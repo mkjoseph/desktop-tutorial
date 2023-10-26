@@ -5,6 +5,7 @@ import sys
 import subprocess
 import json
 import requests
+import random
 
 # Authenticate with the Spotify API
 username = 'your_username'
@@ -36,6 +37,7 @@ if token:
     itunes_library = json.loads(itunes_library_xml)
 
     # Search for each track on Spotify using the Spotipy library
+    track_uris = []
     for track in itunes_library['Tracks'].values():
         if 'Location' not in track:
             continue
@@ -52,8 +54,17 @@ if token:
         if len(results['tracks']['items']) == 0:
             continue
         track_uri = results['tracks']['items'][0]['uri']
+        track_uris.append(track_uri)
 
-        # Add each track to the new playlist in the user's Spotify account
-        sp.user_playlist_add_tracks(username, playlist_id, [track_uri])
+    # Shuffle the list of track URIs
+    random.shuffle(track_uris)
+
+    # Add each track to the new playlist in the user's Spotify account
+    sp.user_playlist_add_tracks(username, playlist_id, track_uris)
 else:
     print('Authentication failed')
+
+# Path: desktop-tutorial/import%20spotipy.py
+# then shuffle the playlist
+
+
