@@ -40,3 +40,4 @@ fetch('/create-checkout-session', {
 .catch(function(error) {
     console.error('Error:', error);
 });
+
