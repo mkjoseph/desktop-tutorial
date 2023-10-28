@@ -1,11 +1,14 @@
-const num1 = 2;
-const num2 = 3;
-const num3 = 4;
-const num4 = 5;
-const num5 = 6;
-const num6 = 7;
-const num7 = 8;
-
-const result = num1 * num2 * num3 * num4 * num5 * num6 * num7;
-
-console.log(result);
+function nextInLine(arr, item) {
+    // Only change code below this line
+    
+    return item;
+    // Only change code above this line
+  }
+  
+  // Setup
+  let testArr = [1, 2, 3, 4, 5];
+  
+  // Display code
+  console.log("Before: " + JSON.stringify(testArr));
+  console.log(nextInLine(testArr, 6));
+  console.log("After: " + JSON.stringify(testArr));
