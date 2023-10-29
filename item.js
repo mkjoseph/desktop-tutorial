@@ -5,7 +5,7 @@ function nextInLine(arr, item) {
     // Only change code above this line
   }
   
-  // Setup.
+  // Setup code
   let testArr = [1, 2, 3, 4, 5];
   
   // Display code
