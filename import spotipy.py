@@ -7,7 +7,7 @@ import json
 import requests
 import random
 
-# Authenticate with the Spotify API
+# Authenticate with the Spotify API. You'll need to register your own application at https://developer.spotify.com/my-applications
 username = 'your_username'
 scope = 'playlist-modify-public'
 client_id = 'your_client_id'
