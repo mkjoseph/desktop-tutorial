@@ -7,5 +7,5 @@ const num6 = 7;
 const num7 = 8;
 
 const result = num1 * num2 * num3 * num4 * num5 * num6 * num7;
-
+// 
 console.log(result);
