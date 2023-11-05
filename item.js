@@ -20,6 +20,6 @@ function golfScore(par, strokes) {
         return "";
     }
 }
-// Change these values to test
+// Only change code above this line
 
 golfScore(5, 4);
