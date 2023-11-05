@@ -1,5 +1,5 @@
 const names = ["Hole-in-one!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey", "Go Home!"];
-// 
+// Only change code below this line
 function golfScore(par, strokes) {
     let score = strokes - par;
     if (score === -1) {
