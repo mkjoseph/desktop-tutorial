@@ -13,8 +13,7 @@ playlist_id = "YOUR_PLAYLIST_ID_HERE"
 results = sp.playlist_tracks(playlist_id)
 track_ids = [item["track"]["id"] for item in results["items"]]
 
-# Shuffle the list of track IDs
-random.shuffle(track_ids)
+# Shuffle the track IDs
 
 # Replace the existing playlist with the shuffled list of track IDs
 sp.playlist_replace_items(playlist_id, track_ids)
