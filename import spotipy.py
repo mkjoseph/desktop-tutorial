@@ -1,21 +1,20 @@
-class Solution:
-# @return a ListNode.    
-    def addTwoNumbers(self, l1, l2):
-        carry = 0
-        root = n = ListNode(0)
-        while l1 or l2 or carry:
-            v1 = v2 = 0
-            if l1:
-                v1 = l1.val
-                l1 = l1.next
-            if l2:
-                v2 = l2.val
-                l2 = l2.next
-            carry, val = divmod(v1+v2+carry, 10)
-            n.next = ListNode(val)
-            n = n.next
-        return root.next
 
-        # code 
+import spotipy
+from spotipy.oauth2 import SpotifyOAuth
+import random
 
-# Path: desktop-tutorial/import%20spotipy.py.py
+# Authenticate with the Spotify API
+sp = spotipy.Spotify(auth_manager=SpotifyOAuth())
+
+# Get the playlist ID of the playlist you want to shuffle
+playlist_id = "YOUR_PLAYLIST_ID_HERE"
+
+# Get the track IDs of all the tracks in the playlist
+results = sp.playlist_tracks(playlist_id)
+track_ids = [item["track"]["id"] for item in results["items"]]
+
+# Shuffle the list of track IDs
+random.shuffle(track_ids)
+
+# Replace the existing playlist with the shuffled list of track IDs
+sp.playlist_replace_items(playlist_id, track_ids)
