@@ -20,7 +20,7 @@ class Solution {
           left = pivot + 1;
       }
     }
-    return 0;  // If it doesn't find a rotation point, it returns 0.
+    return 0;  // If it doesn't find a rotation point, it returns 0
   }
 
   public int search(int left, int right) {
