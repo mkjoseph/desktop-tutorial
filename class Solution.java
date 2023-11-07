@@ -38,7 +38,7 @@ class Solution {
           left = pivot + 1;
       }
     }
-    return -1;  // If it doesn't find the target number, it returns -1.
+    return -1;  // If it doesn't find the target number, it returns -1
   }
 
   public int search(int[] nums, int target) {
