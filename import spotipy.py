@@ -13,7 +13,7 @@ playlist_id = "YOUR_PLAYLIST_ID_HERE"
 results = sp.playlist_tracks(playlist_id)
 track_ids = [item["track"]["id"] for item in results["items"]]
 
-# Shuffle the track IDs.....
+# Shuffle the track IDs..
 random.shuffle(track_ids)
 
 
