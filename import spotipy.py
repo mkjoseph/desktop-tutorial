@@ -3,7 +3,7 @@ import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 import random
 
-# Authenticate with the Spotify API
+# Authenticate with the Spotify API.
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth())
 
 # Get the playlist ID of the playlist you want to shuffle
