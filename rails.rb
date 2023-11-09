@@ -1,7 +1,5 @@
 
-class MathController < ApplicationController
-  def add
-    result = 2 + 2
-    render plain: result.to_s
-  end
+def fahrenheit_to_celsius(fahrenheit)
+    (fahrenheit - 32) * 5 / 9.0
 end
+
